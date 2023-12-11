@@ -20,6 +20,7 @@ const img = {
     slide2:             loadImage("assets/img/slide2.png"),
     slide3:             loadImage("assets/img/slide3.png"),
     slide4:             loadImage("assets/img/slide4.png"),
+    slide4_5:           loadImage("assets/img/slide4.5.png"),
     slide5:             loadImage("assets/img/slide5.png"),
     slide6:             loadImage("assets/img/slide6.png"),
     slide7:             loadImage("assets/img/slide7.png"),

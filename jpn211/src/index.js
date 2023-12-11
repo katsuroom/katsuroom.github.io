@@ -1,9 +1,9 @@
-let ground = new Block(0, 32*16, canvas.width, 8*16);
+let ground = new Block(0, 34*16, canvas.width, 8*16);
 
 let player;
 
-let questionBlock = new QuestionBlock(16*31, 16*21);
-let exclamationBlock = new ExclamationBlock(16*50, 16*22);
+let questionBlock = new QuestionBlock(16*31, 16*23);
+let exclamationBlock = new ExclamationBlock(16*50, 16*24);
 
 const gravity = 1;
 const moveSpeed = 10;
@@ -86,7 +86,7 @@ function update(dt)
 
     if(player.x + player.width > canvas.width)
     {
-        if(slide < 9)
+        if(slide < 10)
         {
             slide++;
             player.x = leftCheckpoint;
@@ -168,15 +168,18 @@ function draw()
             ctx.drawImage(img.slide4, 0, 0);
             break;
         case 6:
-            ctx.drawImage(img.slide5, 0, 0);
+            ctx.drawImage(img.slide4_5, 0, 0);
             break;
         case 7:
-            ctx.drawImage(img.slide6, 0, 0);
+            ctx.drawImage(img.slide5, 0, 0);
             break;
         case 8:
-            ctx.drawImage(img.slide7, 0, 0);
+            ctx.drawImage(img.slide6, 0, 0);
             break;
         case 9:
+            ctx.drawImage(img.slide7, 0, 0);
+            break;
+        case 10:
             ctx.drawImage(img.slide8, 0, 0);
             break;
         default:
@@ -198,25 +201,25 @@ function draw()
         case 3:
             break;
         case 4:
-            ctx.fillText("別名（べつめい） : also known as", 16*2, 16*34);
-            ctx.fillText("音声合成（おんせいごうせい） : voice synthesis", 16*2, 16*36);
-            ctx.fillText("ソフト : software", 16*2, 16*38);
+            ctx.fillText("別名（べつめい） : also known as", 16*2, 16*34.5);
+            ctx.fillText("音声合成（おんせいごうせい） : voice synthesis", 16*2, 16*36.5);
+            ctx.fillText("ソフト : software", 16*2, 16*38.5);
             break;
         case 5:
             ctx.fillText("ボイスバンク : voicebank", 16*2, 16*37);
             break;
-        case 6:
-            ctx.fillText("存在する : exist", 16*2, 16*37);
-            break;
         case 7:
-            ctx.fillText("プロヂューサー : producer", 16*2, 16*34);
-            ctx.fillText("ダウンロード : download", 16*2, 16*36);
-            ctx.fillText("チューニング : tuning", 16*2, 16*38);
-            ctx.fillText("曲（きょく） : song", 16*24, 16*34);
+            ctx.fillText("存在する（そんざいする）: exist", 16*2, 16*37);
             break;
         case 8:
+            ctx.fillText("プロデューサー : producer", 16*2, 16*34.5);
+            ctx.fillText("ダウンロード : download", 16*2, 16*36.5);
+            ctx.fillText("チューニング : tuning", 16*2, 16*38.5);
+            ctx.fillText("曲（きょく） : song", 16*24, 16*34.5);
             break;
         case 9:
+            break;
+        case 10:
             break;
         default:
             break;
